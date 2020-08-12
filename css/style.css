@@ -41,14 +41,16 @@ a {
   text-decoration: none;
   color: inherit;
 }
-h1 {
+h1,
+.header-title {
   font-size: 200px;
   line-height: 227px;
   font-weight: 700;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   font-family: "georgia";
 }
-h2 {
+h2,
+title {
   font-family: "georgia";
   font-style: normal;
   font-weight: normal;
@@ -56,7 +58,8 @@ h2 {
   line-height: 38px;
   color: #4e5665;
 }
-h3 {
+h3,
+matherial-title {
   font-family: "georgia";
   font-style: normal;
   font-weight: normal;
@@ -187,56 +190,62 @@ h3 {
 }
 /* matherial------------- */
 .matherial {
+  display: flex;
+  justify-content: center;
+  align-self: center;
   margin-top: 64px;
 }
-.items {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.matherial-items {
+  padding: 70px 0;
+  background-position: right;
+  background-repeat: no-repeat;
 }
-.items-text {
+.matherial-text {
   position: relative;
-  display: inline-block;
-  transform: translate(57px, 9px);
+  transform: translate(0px, 0px);
   max-width: 470px;
   max-height: 289px;
-  padding: 33px 40px 18px;
+  padding: 33px 40px 33px;
   background-color: #fff;
 }
-.items-text::before,
-.items-text::after {
+.matherial-text::before,
+.matherial-text::after {
   content: "";
   position: absolute;
   width: 33px;
   height: 33px;
 }
-.items-text::before {
+.matherial-text::before {
   border-left: 2px solid #ecb84c;
   border-top: 2px solid #ecb84c;
   top: 19px;
   left: 19px;
 }
-.items-text::after {
+.matherial-text::after {
   border-right: 2px solid #ecb84c;
   border-bottom: 2px solid #ecb84c;
   right: 19px;
   bottom: 19px;
-}
-.second-path {
+} /*
+перенесення картинки та тексту в протележний напрямок по всіх парних елементах
+} */
+.matherial-items:nth-child(even) {
+  background-position: left;
   margin-top: 101px;
 }
-.second-path .items-text {
-  transform: translate(-58px, 30px);
-} /* 
-.second-path .items-text::before {
-  border-left: 2px solid #ecb84c;
-  border-bottom: 2px solid #ecb84c;
-  bottom: 80px;
-  left: 0px;
-} 
-.second-path .items-text::after {
+.matherial-items:nth-child(even) .matherial-text {
+  margin-left: auto;
+}
+.matherial-items:nth-child(even) .matherial-text::before {
   border-right: 2px solid #ecb84c;
-  border-top: 2px solid #ecb84c;
-  top: 19px;
+  /* border-top: 2px solid #ecb84c; */
+  border-left: none;
+  left: auto;
   right: 19px;
-} */
+}
+.matherial-items:nth-child(even) .matherial-text::after {
+  border-left: 2px solid #ecb84c;
+  /* border-bottom: 2px solid #ecb84c; */
+  border-right: none;
+  left: 19px;
+}

@@ -69,7 +69,7 @@
       <!-- section Reason ----------------------- -->
       <div class="conteiner">
         <section class="reason conteiner-content">
-          <h2 class="reason-title">
+          <h2 class="title">
             Відпустка - це твій стиль життя!
           </h2>
           <p class="reason-text">
@@ -124,7 +124,7 @@
           </div>
         </section>
         <section class="description conteiner-content">
-          <h2>
+          <h2 class="title">
             Куба - це...
           </h2>
           <p>
@@ -136,10 +136,14 @@
             fuga nemo commodi.
           </p>
         </section>
+        <!-- додаю стайл для простоти подальшої інтеграції backend parts -->
         <section class="matherial conteiner-content">
-          <div class="items">
-            <div class="items-text">
-              <h3>
+          <div
+            class="matherial-items"
+            style="background-image: url('images/Photo.png');"
+          >
+            <div class="matherial-text">
+              <h3 class="matherial-title">
                 Історична спадщина
               </h3>
               <p>
@@ -149,13 +153,14 @@
                 exercitationem fuga.
               </p>
             </div>
-            <img src="images/Photo.png" alt="photo" />
           </div>
-          <div class="items second-path">
-            <img src="images/Varadero-Beach-Cuba.png" alt="photo" />
-            <div class="items-text">
-              <h3>
-                Неймрвіпеі пляжі
+          <div
+            class="matherial-items"
+            style="background-image: url('images/Varadero-Beach-Cuba.png');"
+          >
+            <div class="matherial-text">
+              <h3 class="matherial-title">
+                Історична спадщина
               </h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum at
@@ -166,8 +171,13 @@
             </div>
           </div>
         </section>
+        <section class="car">
+          <h2 class="title">
+            Кубінський Каділлак
+          </h2>
+          <div class="complit_car"></div>
+        </section>
       </div>
-
       <!-- /section Reason-------------------------------- -->
 
       <?php
