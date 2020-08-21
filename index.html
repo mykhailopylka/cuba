@@ -6,28 +6,36 @@
     <meta name="keywords" content="kaywords" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Viva Cuba</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/slick.css" />
+    <title>The land of dream</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="font/fonts.css" />
-
     <link rel="icon" href="images/favicon.png" type="image" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <!--load all styles Font Awesome-->
     <link
       rel="stylesheet"
       type="text/css"
       href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
     />
-    <!--load all styles Font Awesome-->
   </head>
   <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+    <!-- HEAD========================================== -->
     <header class="header">
       <div class="header-top">
         <div class="header-top__frame">
@@ -60,7 +68,7 @@
             <a href="#" class="menu-list__link">Архитектура</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">Фото</a>
+            <a href="#photo" class="menu-list__link">Фото</a>
           </li>
         </ul>
       </nav>
@@ -68,7 +76,7 @@
     <main class="main">
       <!-- section Reason ----------------------- -->
       <div class="conteiner">
-        <section class="reason conteiner-content">
+        <section class="reason conteiner-content line">
           <h2 class="title">
             Відпустка - це твій стиль життя!
           </h2>
@@ -171,50 +179,128 @@
             </div>
           </div>
         </section>
-        <section class="car">
+        <section class="car line">
           <h2 class="title">
-            Кубінський Каділлак
+            Каділлак з Куби
           </h2>
-          <div class="complit_car"></div>
+          <div class="complit_car">
+            <img class="complit_car-body" src="images/caddy.png" alt="caddy" />
+            <div class="complit_car-point point-1 position">
+              <div class="complit_car-point-center"></div>
+              <a href="@"></a>
+            </div>
+            <div class="complit_car-point point-2 position">
+              <div class="complit_car-point-center"></div>
+              <a href="#"></a>
+            </div>
+            <div class="complit_car-point point-3 position">
+              <div class="complit_car-point-center"></div>
+              <a href="#"></a>
+            </div>
+            <div class="complit_car-point point-4 position">
+              <div class="complit_car-point-center"></div>
+              <a href="#"></a>
+            </div>
+            <!-- bottom line -->
+            <img
+              class="complit_car-road"
+              src="images/Car-shadow.png"
+              alt="line"
+            />
+          </div>
+          <p class="complit_car-text conteiner-content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+            tenetur enim? Exercitationem placeat error culpa earum obcaecati
+            magni distinctio ipsam expedita. Repellat cum distinctio hic sed,
+            minus tempore repudiandae voluptatem cumque, unde doloribus, ratione
+            deleniti aliquid. Enim non doloremque quibusdam veniam saepe. Ad
+            ipsum voluptatem consequatur officiis cum, aspernatur minus!
+          </p>
+        </section>
+        <section class="photo" id="photo">
+          <h2>
+            Куба в фото
+          </h2>
+          <div class="photo-text conteiner-content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Laboriosam, officia officiis omnis animi quod vitae similique
+            labore, facere quo maxime minus tempore deleniti impedit et optio
+            modi asperiores. Nam veniam laborum provident soluta libero quas
+            laboriosam eius saepe consequuntur totam adipisci corrupti ipsam,
+            autem, nemo, dolorum architecto dolorem similique. Numquam!
+          </div>
+          <div class="photo-slider">
+            <img class="photo__img" src="images/slider.jpg" alt="slider" />
+            <img class="photo__img" src="images/slider.jpg" alt="slider" />
+            <img class="photo__img" src="images/slider.jpg" alt="slider" />
+          </div>
         </section>
       </div>
-      <!-- /section Reason-------------------------------- -->
-
-      <?php
-      $today = date("D");
-      switch($today){
-          case "Mon":
-              echo "Today is Monday. Clean your house.";
-              break;
-          case "Tue":
-              echo "Today is Tuesday. Buy some food.";
-              break;
-          case "Wed":
-              echo "Today is Wednesday. Visit a doctor.";
-              break;
-          case "Thu":
-              echo "Today is Thursday. Repair your car.";
-              break;
-          case "Fri":
-              echo "Today is Friday. Party tonight.";
-              break;
-          case "Sat":
-              echo "Today is Saturday. Its movie time.";
-              break;
-          case "Sun":
-              echo "Today is Sunday. Do some rest.";
-              break;
-          default:
-              echo "No information available for that day.";
-              break;
-      }
-      echo "fgdf fdg fdg";
-      ?>
     </main>
     <footer class="footer">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, qui.
-      </p>
+      <div class="conteiner wrapper">
+        <div class="footer-items">
+          <div class="items__head">
+            <h4>
+              компанія
+            </h4>
+          </div>
+          <ul>
+            <li><a href="#">Про компанію</a></li>
+            <li><a href="#">Працюй за нами</a></li>
+            <li><a href="#">Преса</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <div class="items__head">
+            <h4>
+              деталі
+            </h4>
+          </div>
+          <ul>
+            <li><a href="#">Бронювання</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Умови</a></li>
+            <li><a href="#">Політика</a></li>
+            <li><a href="#">Карта сайта</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <div class="items__head">
+            <h4>
+              контакти
+            </h4>
+          </div>
+          <ul>
+            <li><a id="messenger" href="#">Зв'яжись з нами</a></li>
+            <li><a id="facebook" href="#">Facebook</a></li>
+            <li><a id="instagram" href="#">Instagram</a></li>
+            <li><a id="youtube" href="#">YouTube</a></li>
+            <li><a id="email" href="#">Почта</a></li>
+          </ul>
+        </div>
+        <div class="footer-items">
+          <div class="items__head">
+            <h4>
+              контакти
+            </h4>
+          </div>
+          <ul>
+            <li><a href="#">Ідеї для фотосесії</a></li>
+            <li><a href="#">Свадьба на кубі</a></li>
+            <li><a href="#">ТОП 10 ресторанів Куби</a></li>
+            <li><a href="#">Кращі місця Гавани</a></li>
+            <li><a href="#">Кубинська кухня</a></li>
+          </ul>
+        </div>
+
+        <!-- //conteiner -->
+      </div>
+      <div class="copyright">
+        <p>
+          © 2020 Всі права захищені правовласниками
+        </p>
+      </div>
     </footer>
   </body>
 </html>

@@ -32,7 +32,6 @@ body {
   flex: 1 0 auto;
 }
 .footer {
-  height: 10px;
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
   flex: 0 0 auto;
 }
@@ -40,6 +39,9 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+}
+li {
+  list-style-type: none;
 }
 h1,
 .header-title {
@@ -57,6 +59,8 @@ title {
   font-size: 32px;
   line-height: 38px;
   color: #4e5665;
+  margin-bottom: 22px;
+  text-align: center;
 }
 h3,
 matherial-title {
@@ -68,12 +72,24 @@ matherial-title {
   color: #4e5665;
   margin-bottom: 20px;
 }
+h4 {
+  font-family: "latobold";
+  font-style: normal;
+  font-size: 15px;
+  color: #4e5665;
+  padding-bottom: 15px;
+}
 /* conteiner =================== */
 .conteiner {
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 15px;
   /* border: 1px solid hsl(350, 92%, 46%); */
+}
+.conteiner-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
 }
 /* ================== */
 .header-top {
@@ -106,6 +122,9 @@ matherial-title {
   white-space: nowrap;
   align-items: center;
   margin-bottom: -12px;
+  font-family: "georgia";
+  font-size: 24px;
+  line-height: 27px;
 }
 .header-text::after,
 .header-text::before {
@@ -139,18 +158,21 @@ matherial-title {
   border-bottom: 4px solid #ecb84c;
 }
 /* reason------------------------------- */
-.reason::after {
+.reason {
+  text-align: center;
+  margin-top: 80px;
+}
+/* лінія після секції (повторюється) */
+.line::after {
   content: "";
   border-bottom: 1px solid rgba(208, 221, 216, 0.5);
-}
-.conteiner-content {
-  display: flex;
-  flex-direction: column;
-  padding: 0 100px;
 }
 .reason-title {
   margin: 83px 0 22px;
   text-align: center;
+}
+.reason-text {
+  text-align: left;
 }
 .reason-link {
   display: flex;
@@ -202,7 +224,6 @@ matherial-title {
 }
 .matherial-text {
   position: relative;
-  transform: translate(0px, 0px);
   max-width: 470px;
   max-height: 289px;
   padding: 33px 40px 33px;
@@ -248,4 +269,162 @@ matherial-title {
   /* border-bottom: 2px solid #ecb84c; */
   border-right: none;
   left: 19px;
+}
+/* caddilack -------------------------------*/
+.car {
+  margin-top: 121px;
+  border-bottom: 1px solid rgba(208, 221, 216, 0.5);
+}
+.complit_car {
+  display: flex;
+  flex-direction: column;
+  margin-top: 111px;
+  max-height: min-content;
+  min-height: 381px;
+}
+.complit_car-road {
+  transform: translate(0px, -130px);
+}
+/* позиціювання крапок опису на авто */
+.complit_car-point {
+  transform: translate(0px, -113px);
+  background-color: #ecb84c;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.point-1 {
+  transform: translate(150px, -211px);
+}
+.point-1:hover {
+  content: "";
+  background-color: aqua;
+}
+.point-2 {
+  transform: translate(495px, -242px);
+}
+.point-3 {
+  transform: translate(765px, -319px);
+}
+.point-4 {
+  transform: translate(837px, -149px);
+}
+/* центральний круг */
+.position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.complit_car-point-center {
+  width: 10px;
+  height: 10px;
+  background-color: #ffd600;
+  border-radius: 50%;
+  opacity: 1;
+}
+/* //------------------------------ */
+.complit_car-text {
+  margin-bottom: 81px;
+}
+/* foto --------------------------- */
+.photo {
+  margin-top: 80px;
+}
+.photo-text {
+  position: relative;
+  padding-bottom: 48px;
+  margin-bottom: 56px;
+}
+.photo-text::after {
+  content: "";
+  position: absolute;
+  width: 270px;
+  height: 1px;
+  background-color: rgba(208, 221, 216, 0.5);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+/* slider -------------------------- */
+.photo-slider {
+  max-width: 640px;
+  margin: 0 auto;
+}
+/* через інспектор виясняємо, що в кнопках слайдера є спільний клас slick-arow, тому модифікуємо його під свої потреби */
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  /*   transform: translateY(-50%) задає можливість підняти елемент на половину своєї висоти, так як    top: 50% опускає не на середину картинки, а не середину + вся висота елемента кнопки*/
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: none;
+  background-color: #ecb84c;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 2;
+}
+.slick-prev {
+  left: -20px;
+}
+.slick-next {
+  right: -20px;
+}
+/* footer=========================== */
+.footer {
+  background-color: #f8f8f8;
+  border-top: 1px solid #d4d6d8;
+  margin-top: 80px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-family: "latoregular";
+  font-size: 14px;
+  line-height: 19px;
+  color: #505050;
+  margin-top: 56px;
+  padding: 0 100px;
+}
+.footer-items li {
+  padding-bottom: 8px;
+  left: 0;
+  transition: 0.25s all;
+}
+.footer-items li:hover {
+  color: #d86140;
+}
+.items__head {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding-left: 2.4rem;
+}
+#messenger::before {
+  content: url(../images/interface.png);
+  padding-right: 10px;
+}
+#facebook::before {
+  content: url(../images/Shape.png);
+  padding-right: 10px;
+}
+#instagram::before {
+  content: url(../images/instagram-logo.png);
+  padding-right: 10px;
+}
+#youtube::before {
+  content: url(../images/youtube.png);
+  padding-right: 10px;
+}
+#email::before {
+  content: url(../images/email.png);
+  padding-right: 10px;
+}
+.copyright {
+  text-align: center;
+  margin: 40px 0 32px 0;
 }
