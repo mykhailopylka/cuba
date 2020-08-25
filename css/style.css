@@ -55,7 +55,7 @@ h2,
 title {
   font-family: "georgia";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 32px;
   line-height: 38px;
   color: #4e5665;
@@ -282,47 +282,73 @@ h4 {
   max-height: min-content;
   min-height: 381px;
 }
-.complit_car-road {
-  transform: translate(0px, -130px);
+.complit_car-body {
+  max-width: 1170px;
+  position: relative;
+}
+/* дорога-------------- */
+.complit_car-body::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/Car-shadow.png);
+  width: 1170px;
+  height: 8px;
+  left: 0;
+  bottom: 0;
+  /* transform: translate(0px, -150px); */
 }
 /* позиціювання крапок опису на авто */
-.complit_car-point {
-  transform: translate(0px, -113px);
-  background-color: #ecb84c;
+.complit_car-dot {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(236, 184, 76, 0.75);
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  opacity: 0.8;
+  cursor: pointer;
+  /* z-index: 1; */
 }
-.point-1 {
-  transform: translate(150px, -211px);
-}
-.point-1:hover {
+.complit_car-dot::after {
   content: "";
-  background-color: aqua;
-}
-.point-2 {
-  transform: translate(495px, -242px);
-}
-.point-3 {
-  transform: translate(765px, -319px);
-}
-.point-4 {
-  transform: translate(837px, -149px);
-}
-/* центральний круг */
-.position {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.complit_car-point-center {
+  position: absolute;
   width: 10px;
   height: 10px;
   background-color: #ffd600;
   border-radius: 50%;
+  cursor: pointer;
+  /* z-index: 2; */
+}
+/* опис при наведені --------- */
+.complit_car-description {
+  position: absolute;
+  transform: translate(775px, -20px);
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.complit_car-description:hover {
   opacity: 1;
 }
+/* =========================== */
+.dot-1 {
+  transform: translate(150px, -211px);
+}
+.dot-1:hover {
+  content: "";
+  background-color: aqua;
+}
+.dot-2 {
+  transform: translate(495px, -242px);
+}
+.dot-3 {
+  transform: translate(765px, -319px);
+}
+.dot-4 {
+  transform: translate(837px, -149px);
+}
+
 /* //------------------------------ */
 .complit_car-text {
   margin-bottom: 81px;
