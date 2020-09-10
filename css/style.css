@@ -81,10 +81,12 @@ h4 {
 }
 /* conteiner =================== */
 .conteiner {
+  /* display: flex; */
+  flex-direction: column;
   margin: 0 auto;
   max-width: 1200px;
   padding: 0 15px;
-  /* border: 1px solid hsl(350, 92%, 46%); */
+  border: 1px solid red;
 }
 .conteiner-content {
   display: flex;
@@ -114,16 +116,16 @@ h4 {
   margin: auto;
 }
 .header-text {
-  font-size: 24px;
-  line-height: 27px;
-  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
   display: flex;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
   /* заборона перенесення тексту */
   white-space: nowrap;
   align-items: center;
   margin-bottom: -12px;
   font-family: "georgia";
-  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
   line-height: 27px;
 }
 .header-text::after,
@@ -140,7 +142,14 @@ h4 {
 }
 /* menu------------ */
 .menu {
+  display: block;
+  position: relative;
   border-bottom: 1px solid rgba(208, 221, 216, 0.5);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  color: #909090;
 }
 .menu-list {
   display: flex;
@@ -157,8 +166,16 @@ h4 {
   color: #4e5665;
   border-bottom: 4px solid #ecb84c;
 }
+/* menu-burger------------ */
+
+/* test ================================ */
+
+.menu-icon-wrapper {
+  display: none;
+}
 /* reason------------------------------- */
 .reason {
+  display: flex;
   text-align: center;
   margin-top: 80px;
 }
@@ -179,22 +196,27 @@ h4 {
   justify-content: end;
   color: #ecb84c;
 }
+.reason-link:hover {
+  filter: brightness(0.5);
+}
 .reason-link i {
   display: flex;
   /* justify-content: center; */
   align-items: center;
   width: 10px;
-  padding-left: 2px;
+  padding-left: 20px;
   color: #ecb84c;
 }
 .reason-statistics {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   margin: 64px 0 81px;
 }
 .reason-statistics-item {
   text-align: center;
+  padding-left: 20px;
 }
 .reason-statistics-images {
   margin-bottom: 32px;
@@ -212,12 +234,11 @@ h4 {
 }
 /* matherial------------- */
 .matherial {
-  display: flex;
-  justify-content: center;
   align-self: center;
   margin-top: 64px;
 }
 .matherial-items {
+  display: block;
   padding: 70px 0;
   background-position: right;
   background-repeat: no-repeat;
@@ -229,6 +250,7 @@ h4 {
   padding: 33px 40px 33px;
   background-color: #fff;
 }
+/* кутники */
 .matherial-text::before,
 .matherial-text::after {
   content: "";
@@ -247,7 +269,8 @@ h4 {
   border-bottom: 2px solid #ecb84c;
   right: 19px;
   bottom: 19px;
-} /*
+}
+/*
 перенесення картинки та тексту в протележний напрямок по всіх парних елементах
 } */
 .matherial-items:nth-child(even) {
@@ -272,6 +295,8 @@ h4 {
 }
 /* caddilack -------------------------------*/
 .car {
+  display: flex;
+  flex-direction: column;
   margin-top: 121px;
   border-bottom: 1px solid rgba(208, 221, 216, 0.5);
 }
@@ -280,18 +305,23 @@ h4 {
   flex-direction: column;
   margin-top: 111px;
   max-height: min-content;
-  min-height: 381px;
+  padding-bottom: 3em;
 }
 .complit_car-body {
-  max-width: 1170px;
   position: relative;
+}
+.complit_car-body img {
+  max-width: 1170px;
+  width: 100%;
 }
 /* дорога-------------- */
 .complit_car-body::after {
   content: "";
+  display: flex;
   position: absolute;
   background-image: url(../images/Car-shadow.png);
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%;
   height: 8px;
   left: 0;
   bottom: 0;
@@ -320,25 +350,41 @@ h4 {
   cursor: pointer;
   /* z-index: 2; */
 }
-/* опис при наведені --------- */
+/* опис при наведені (виклик однієї функції, при наведенні на іншу )--------- */
 .complit_car-description {
   position: absolute;
   transform: translate(775px, -20px);
-  opacity: 0;
   cursor: pointer;
-  transition: 0.3s all;
+  opacity: 0;
+  transition: 0.5s all;
 }
-.complit_car-description:hover {
+.complit_car-dot:hover .complit_car-description {
   opacity: 1;
+}
+.pos_1 {
+  transform: translate(123px, -62px);
+}
+.pos_2 {
+  transform: translate(119px, -55px);
+}
+.pos_3 {
+  transform: translate(124px, -60px);
+}
+.pos_4 {
+  transform: translate(126px, 69px);
+}
+.complit_car-description__text {
+  position: absolute;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  color: #505050;
 }
 /* =========================== */
 .dot-1 {
   transform: translate(150px, -211px);
 }
-.dot-1:hover {
-  content: "";
-  background-color: aqua;
-}
+
 .dot-2 {
   transform: translate(495px, -242px);
 }
@@ -348,14 +394,27 @@ h4 {
 .dot-4 {
   transform: translate(837px, -149px);
 }
-
+/* опис --------------------------- */
+.complit_car-description__text {
+  transform: translate(154px, -173px);
+}
+.dot-4 .complit_car-description__text {
+  transform: translate(154px, -75px);
+}
 /* //------------------------------ */
 .complit_car-text {
   margin-bottom: 81px;
 }
 /* foto --------------------------- */
 .photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   margin-top: 80px;
+  max-width: 970px;
+  width: 100%;
 }
 .photo-text {
   position: relative;
@@ -376,6 +435,7 @@ h4 {
 /* slider -------------------------- */
 .photo-slider {
   max-width: 640px;
+  padding: 20px;
   margin: 0 auto;
 }
 /* через інспектор виясняємо, що в кнопках слайдера є спільний клас slick-arow, тому модифікуємо його під свої потреби */
@@ -407,6 +467,8 @@ h4 {
 
 .wrapper {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-family: "latoregular";
   font-size: 14px;
@@ -453,4 +515,217 @@ h4 {
 .copyright {
   text-align: center;
   margin: 40px 0 32px 0;
+}
+/* media =====================*/
+@media (max-width: 1105px) {
+  /* позначиники на машині */
+  .dot-1 {
+    transform: translate(100px, -211px);
+  }
+  .dot-2 {
+    transform: translate(445px, -242px);
+  }
+  .dot-3 {
+    transform: translate(715px, -319px);
+  }
+  .dot-4 {
+    transform: translate(787px, -149px);
+  }
+  .dot-4 .complit_car-description__text {
+    transform: translate(154px, -75px);
+  }
+}
+@media (max-width: 1050px) {
+  /* позначиники на машині */
+  .dot-1 {
+    transform: translate(100px, -211px);
+  }
+  .dot-2 {
+    transform: translate(445px, -242px);
+  }
+  .dot-3 {
+    transform: translate(700px, -319px);
+  }
+  .dot-4 {
+    transform: translate(700px, -149px);
+  }
+  .dot-4 .complit_car-description__text {
+    transform: translate(150px, -75px);
+  }
+}
+@media (max-width: 1000px) {
+  .matherial-items {
+    background-position: top;
+    padding: 320px 10px 20px;
+  }
+  .matherial-items:nth-child(even) {
+    background-position: top;
+  }
+  .matherial-text {
+    margin: 0 auto;
+    padding-top: 36px;
+  }
+  /* позначиники на машині */
+  .complit_car-dot {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .header-title {
+    font-size: 120px;
+    line-height: 150px;
+  }
+  .header-text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .conteiner-content {
+    padding: 0 20px 0 20px;
+  }
+  /* menu ========================= */
+  .menu-list {
+    display: none;
+  }
+  .menu-list__link {
+    display: block;
+  }
+  /* menu burger---------------- */
+  .menu-icon-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    padding: 40px;
+  }
+  /* хрестик----------------------- */
+  .menu-icon {
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background-color: #ecb84c;
+  }
+  .menu-icon::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: "";
+    width: 30px;
+    height: 5px;
+    background-color: #ecb84c;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+  .menu-icon::after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: "";
+    width: 30px;
+    height: 5px;
+    background-color: #ecb84c;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+  .menu-icon.menu-icon-active {
+    background-color: transparent;
+  }
+  .menu-icon.menu-icon-active::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+  .menu-icon.menu-icon-active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+  .photo-text {
+    padding-bottom: 2em;
+  }
+  /* footer=============== */
+  .wrapper {
+    justify-content: space-around;
+  }
+  .footer-items {
+    width: 50%;
+  }
+  /* заборона переносу на нову стрічку */
+  .footer-items a {
+    white-space: nowrap;
+  }
+}
+/* 540 ========================== */
+@media (max-width: 540px) {
+  .header-title {
+    font-size: 100px;
+    line-height: 150px;
+  }
+  .header-text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  /* matherial */
+  .matherial-text {
+    padding: 1px 36px 10px;
+  }
+  .matherial-text p {
+    font-size: 12px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .matherial-text::before {
+    top: 5px;
+    left: 5px;
+  }
+  .matherial-text::after {
+    right: 5x;
+    bottom: 5px;
+  }
+  .matherial-items:nth-child(2n) {
+    margin-top: 50px;
+  }
+  /* зменшуємо кутики в matherial */
+  .matherial-text::before,
+  .matherial-text::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* 400 ========================== */
+@media (max-width: 400px) {
+  .header-title {
+    font-size: 60px;
+    line-height: 100px;
+  }
+  .header-text {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+/* 320 ========================== */
+@media (max-width: 320px) {
+  .header-title {
+    font-size: 50px;
+    line-height: 120px;
+  }
+  .header-text {
+    font-size: 8px;
+    line-height: 12px;
+  }
+}
+
+/* min----Задаємо властивіть найвищої пріорітетності для меня, щоб при зміні розширення було вірне відображення --------- */
+@media (min-width: 701px) {
+  .menu-list {
+    display: flex !important;
+  }
 }

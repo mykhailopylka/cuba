@@ -34,38 +34,38 @@
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <!-- HEAD========================================== -->
     <header class="header">
       <div class="header-top">
         <div class="header-top__frame">
-          <h1 class="header-title">
-            Куба
-          </h1>
-          <p class="header-text">
-            Explore the world of Casas & Cadillacs
-          </p>
+          <h1 class="header-title">Куба</h1>
+          <p class="header-text">Explore the world of Casas & Cadillacs</p>
         </div>
       </div>
+      <!-- menu burger ========== -->
       <nav class="menu">
+        <div class="menu-icon-wrapper">
+          <div class="menu-icon"></div>
+        </div>
         <ul class="menu-list">
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">Про сайт</a>
+            <a href="#about" class="menu-list__link">Про сайт</a>
           </li>
           <li class="menu-list__item">
             <a href="#" class="menu-list__link">Головна</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">Краєвиди</a>
+            <a href="#views" class="menu-list__link">Краєвиди</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">Погода</a>
+            <a href="#weather" class="menu-list__link">Погода</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">Плани</a>
+            <a href="#plans" class="menu-list__link">Плани</a>
           </li>
           <li class="menu-list__item">
-            <a href="#" class="menu-list__link">Архитектура</a>
+            <a href="#arch" class="menu-list__link">Архитектура</a>
           </li>
           <li class="menu-list__item">
             <a href="#photo" class="menu-list__link">Фото</a>
@@ -74,13 +74,10 @@
       </nav>
     </header>
     <main class="main">
-      <!-- section Reason ----------------------- -->
       <div class="conteiner">
         <section class="reason conteiner-content line">
-          <h2 class="title">
-            Відпустка - це твій стиль життя!
-          </h2>
-          <p class="reason-text">
+          <h2 class="title">Відпустка - це твій стиль життя!</h2>
+          <p class="reason-text" id="about">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
             provident ipsa officiis, molestias voluptas omnis maiores tenetur
             pariatur odit. Explicabo accusantium aut dolores expedita, officia
@@ -132,10 +129,8 @@
           </div>
         </section>
         <section class="description conteiner-content">
-          <h2 class="title">
-            Куба - це...
-          </h2>
-          <p>
+          <h2 class="title">Куба - це...</h2>
+          <p id="views">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
             numquam? Error voluptatum quod iusto dolorem culpa ex fuga velit
             provident incidunt quibusdam qui, sit ipsum a ullam veniam dolorum.
@@ -148,12 +143,10 @@
         <section class="matherial conteiner-content">
           <div
             class="matherial-items"
-            style="background-image: url('images/Photo.png');"
+            style="background-image: url('images/Photo.png')"
           >
             <div class="matherial-text">
-              <h3 class="matherial-title">
-                Історична спадщина
-              </h3>
+              <h3 class="matherial-title" id="weather">Історична спадщина</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum at
                 quia accusantium illo est consectetur asperiores nam fugiat
@@ -164,12 +157,10 @@
           </div>
           <div
             class="matherial-items"
-            style="background-image: url('images/Varadero-Beach-Cuba.png');"
+            style="background-image: url('images/Varadero-Beach-Cuba.png')"
           >
             <div class="matherial-text">
-              <h3 class="matherial-title">
-                Історична спадщина
-              </h3>
+              <h3 class="matherial-title" id="plans">Історична спадщина</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum at
                 quia accusantium illo est consectetur asperiores nam fugiat
@@ -180,33 +171,67 @@
           </div>
         </section>
         <!-- наш автомобіль------------------------ -->
-        <section class="car">
-          <h2 class="title">
-            Каділлак з Куби
-          </h2>
+        <section class="car" id="arch">
+          <h2 class="title">Каділлак з Куби</h2>
           <div class="complit_car">
             <div class="complit_car-body">
               <img src="images/caddy.png" alt="caddy" />
             </div>
             <div class="complit_car-dot dot-1">
               <a href="#"></a>
+              <div class="complit_car-description pos_1">
+                <svg class="complit_car-content" width="243.35" height="122">
+                  <polyline
+                    points="0,122 130,1 244,1"
+                    style="fill: none; stroke: #ecb84c; stroke-width: 1"
+                  />
+                </svg>
+                <div class="complit_car-description__text">
+                  <p>Поїхали</p>
+                </div>
+              </div>
             </div>
             <div class="complit_car-dot dot-2">
               <a href="#"></a>
+              <div class="complit_car-description pos_2">
+                <svg class="complit_car-content" width="243.35" height="122">
+                  <polyline
+                    points="0,122 130,1 244,1"
+                    style="fill: none; stroke: #ecb84c; stroke-width: 1"
+                  />
+                </svg>
+                <div class="complit_car-description__text">
+                  <p>Відкрий</p>
+                </div>
+              </div>
             </div>
             <div class="complit_car-dot dot-3">
               <a href="#"></a>
+              <div class="complit_car-description pos_3">
+                <svg class="complit_car-content" width="243.35" height="122">
+                  <polyline
+                    points="0,122 130,1 244,1"
+                    style="fill: none; stroke: #ecb84c; stroke-width: 1"
+                  />
+                </svg>
+                <div class="complit_car-description__text">
+                  <p>Накрий</p>
+                </div>
+              </div>
             </div>
             <div class="complit_car-dot dot-4">
-              <a href="#"></a>
-            </div>
-            <div class="complit_car-description">
-              <svg class="complit_car-content" width="243.35" height="122">
-                <polyline
-                  points="0,122 130,1 244,1"
-                  style="fill: none; stroke: #ecb84c; stroke-width: 1;"
-                />
-              </svg>
+              <a href="#">&nbsp;</a>
+              <div class="complit_car-description pos_4">
+                <svg class="complit_car-content" width="243.35" height="122">
+                  <polyline
+                    points="0,0 130,100 244,100"
+                    style="fill: none; stroke: #ecb84c; stroke-width: 1"
+                  />
+                </svg>
+                <div class="complit_car-description__text">
+                  <p>Крутимо</p>
+                </div>
+              </div>
             </div>
           </div>
           <p class="complit_car-text conteiner-content">
@@ -219,9 +244,7 @@
           </p>
         </section>
         <section class="photo" id="photo">
-          <h2>
-            Куба в фото
-          </h2>
+          <h2>Куба в фото</h2>
           <div class="photo-text conteiner-content">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Laboriosam, officia officiis omnis animi quod vitae similique
@@ -242,9 +265,7 @@
       <div class="conteiner wrapper">
         <div class="footer-items">
           <div class="items__head">
-            <h4>
-              компанія
-            </h4>
+            <h4>компанія</h4>
           </div>
           <ul>
             <li><a href="#">Про компанію</a></li>
@@ -254,9 +275,7 @@
         </div>
         <div class="footer-items">
           <div class="items__head">
-            <h4>
-              деталі
-            </h4>
+            <h4>деталі</h4>
           </div>
           <ul>
             <li><a href="#">Бронювання</a></li>
@@ -268,9 +287,7 @@
         </div>
         <div class="footer-items">
           <div class="items__head">
-            <h4>
-              контакти
-            </h4>
+            <h4>контакти</h4>
           </div>
           <ul>
             <li><a id="messenger" href="#">Зв'яжись з нами</a></li>
@@ -282,9 +299,7 @@
         </div>
         <div class="footer-items">
           <div class="items__head">
-            <h4>
-              контакти
-            </h4>
+            <h4>контакти</h4>
           </div>
           <ul>
             <li><a href="#">Ідеї для фотосесії</a></li>
@@ -294,13 +309,10 @@
             <li><a href="#">Кубинська кухня</a></li>
           </ul>
         </div>
-
         <!-- //conteiner -->
       </div>
       <div class="copyright">
-        <p>
-          © 2020 Всі права захищені правовласниками
-        </p>
+        <p>© 2020 Всі права захищені правовласниками</p>
       </div>
     </footer>
   </body>
